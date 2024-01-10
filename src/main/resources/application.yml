@@ -6,10 +6,10 @@ spring:
     name: my-zuul-service
 
 zuul:
-  routes:
-    first-service:
-      path: /first-service/**
-      url: http://localhost:8081
+  routes: # 라우팅 설정
+    first-service: # 임의의 프로젝트 이름 지정
+      path: /first-service/**  #  first-service로 요청되는 모든 항목은
+      url: http://localhost:8081  # 여기 url로 갈 것이다.
     second-service:
       path: /second-service/**
       url: http://localhost:8082
